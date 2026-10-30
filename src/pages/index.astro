@@ -1,13 +1,18 @@
 ---
 import Layout from "@/layouts/page.astro"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import Content from "@/content/index.md"
+import { cn } from "@/lib/utils"
 ---
 
 <Layout>
   <div class="typeset">
-    <h1>Hi, I'm Alice</h1>
-    <Button client:load className="mt-2">
-      <a href="mailto:alice@clarityslt.co.nz">Contact</a>
-    </Button>
+    <Content />
+    <a
+      href="mailto:alice@clarityslt.co.nz"
+      class={cn(buttonVariants({ variant: "default" }), "no-underline my-4")}
+    >
+      Contact
+    </a>
   </div>
 </Layout>
