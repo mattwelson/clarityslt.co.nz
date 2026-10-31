@@ -1,0 +1,10 @@
+---
+import { FaqAccordion } from "@/components/faq"
+import { getCollection, render } from "astro:content"
+
+const faqItems = await getCollection("faq")
+const items = faqItems.sort((a, b) => a.data.order - b.data.order)
+---
+
+<h1>Frequently Asked Questions (FAQ)</h1>
+<FaqAccordion items={items} client:load />

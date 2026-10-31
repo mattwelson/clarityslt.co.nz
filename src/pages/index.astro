@@ -1,18 +1,44 @@
 ---
 import Layout from "@/layouts/page.astro"
 import { buttonVariants } from "@/components/ui/button"
-import Content from "@/content/index.md"
+import Header from "@/content/header.md"
+import Team from "@/content/team.md"
+import Services from "@/content/services.md"
+import Faq from "@/content/faq.astro"
 import { cn } from "@/lib/utils"
 ---
 
 <Layout>
   <div class="typeset">
-    <Content />
-    <a
-      href="mailto:alice@clarityslt.co.nz"
-      class={cn(buttonVariants({ variant: "default" }), "no-underline my-4")}
+    <div class="container">
+      <Header />
+    </div>
+    <div
+      class="my-8 py-8 bg-accent text-accent-foreground border-t border-b border-olive-200 scroll-m-8"
+      id="team"
     >
-      Contact
-    </a>
+      <div class="container">
+        <Team />
+      </div>
+    </div>
+    <div>
+      <div class="container" id="services">
+        <Services />
+      </div>
+    </div>
+    <div>
+      <div class="container" id="faq">
+        <Faq />
+      </div>
+    </div>
+    <div class="container" id="contact">
+      <p>Need more help?</p>
+      <a
+        href="mailto:alice@clarityslt.co.nz"
+        class={cn(buttonVariants({ variant: "default" }), "no-underline my-4")}
+      >
+        Contact us
+      </a>
+    </div>
   </div>
 </Layout>
