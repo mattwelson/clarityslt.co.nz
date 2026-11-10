@@ -19,7 +19,7 @@ export function FaqAccordion({
   return (
     <Accordion defaultValue={items[0] ? [items[0].data.question] : []}>
       {items.map((item) => (
-        <AccordionItem value={item.data.question}>
+        <AccordionItem value={item.data.question} key={item.data.question}>
           <AccordionTrigger>{item.data.question}</AccordionTrigger>
           <AccordionContent>
             <div

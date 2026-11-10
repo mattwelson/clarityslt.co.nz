@@ -1,6 +1,6 @@
 ---
 import { FaqAccordion } from "@/components/faq"
-import { getCollection, render } from "astro:content"
+import { getCollection } from "astro:content"
 
 const faqItems = await getCollection("faq")
 const items = faqItems.sort((a, b) => a.data.order - b.data.order)
