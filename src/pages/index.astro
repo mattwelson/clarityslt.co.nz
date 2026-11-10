@@ -10,11 +10,13 @@ import { cn } from "@/lib/utils"
 
 <Layout>
   <div class="typeset">
-    <div class="container">
-      <Header />
+    <div class="my-8 py-32 text-denim-700 [--color-foreground:var(--text-denim-600)] text-center md:[&_h1]:text-5xl">
+      <div class="container">
+        <Header />
+      </div>
     </div>
     <div
-      class="my-8 py-8 bg-accent text-accent-foreground border-t border-b border-olive-200 scroll-m-8"
+      class="my-8 py-24 bg-primary text-primary-foreground border-t border-b border-olive-200 scroll-m-8 [--color-foreground:var(--text-primary-foreground)]"
       id="team"
     >
       <div class="container">
@@ -26,19 +28,24 @@ import { cn } from "@/lib/utils"
         <Services />
       </div>
     </div>
-    <div>
+    <div class="my-8 py-24 bg-sage text-sage-foreground border-t border-b border-olive-200 scroll-m-8 [--color-foreground:var(--text-muted-foreground)]">
       <div class="container" id="faq">
         <Faq />
       </div>
     </div>
-    <div class="container" id="contact">
-      <p>Need more help?</p>
-      <a
-        href="mailto:alice@clarityslt.co.nz"
-        class={cn(buttonVariants({ variant: "default" }), "no-underline my-4")}
-      >
-        Contact us
-      </a>
+    <div class="my-8 py-24 text-center">
+      <div class="container" id="contact">
+        <h1>Need more help?</h1>
+        <a
+          href="mailto:alice@clarityslt.co.nz"
+          class={cn(
+            buttonVariants({ variant: "default" }),
+            "no-underline my-4"
+          )}
+        >
+          Contact us
+        </a>
+      </div>
     </div>
   </div>
 </Layout>
